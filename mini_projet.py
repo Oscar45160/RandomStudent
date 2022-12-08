@@ -3,18 +3,22 @@ import random
 list_of_student = []
 prenom = ""
 choix = ""
-menu = ""
 list_secours = []
 menu_random = ""
 a = 5
 
+menu = {
+    "1": "Fill the list",
+    "2": "Draw student",
+    "0": "Quit the app"
+}
+
 while True:
-    print("\tMenu")
-    print("1 - Fill the list")
-    print("2 - Draw student ")
-    print("0 - Quit the app")
-    menu = input()
-    if menu == "1":
+    for key, value in menu.items():
+        print(key, value)
+    choice = input("Select a number to navigate trough the menu ")
+    print(menu.get(choice, "The nomber is out of range"))
+    if menu(choice) == "1":
         while True:
             prenom = input("Enter the name of the student / Q to quit to menu : ")
             if list_of_student.count(prenom) > 0:
