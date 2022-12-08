@@ -6,6 +6,7 @@ choix = ""
 menu = ""
 list_secours = []
 menu_random = ""
+a = 5
 
 while True:
     print("\tMenu")
